@@ -26,7 +26,7 @@ export default function parseMultipleLineData(response) {
                 name: responseName,
                 values: areachartDataValue
 
-            })
+            });
             areachartDataValue = [];
         }
         return areachartDataFinal;

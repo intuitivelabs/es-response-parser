@@ -40,7 +40,7 @@ export default function parseMultipleLineDataShareAxis(responseName, response, r
             name: responseName,
             values: areachartDataValue
 
-        })
+        });
 
         return areachartDataFinal;
     } else {

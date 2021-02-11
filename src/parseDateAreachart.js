@@ -36,11 +36,11 @@ export default function parseDateAreachart(responseName, response, responseName2
             name: responseName2,
             values: areachartDataValue
 
-        })
+        });
 
         return areachartDataFinal;
     }
-    return ""
+    return "";
 }
 
 

@@ -35,7 +35,7 @@ export default function parseMultipleLineDataShareAxisWithoutAgg(responseName, r
             name: responseName,
             values: areachartDataValue
 
-        })
+        });
 
         return areachartDataFinal;
     } else {

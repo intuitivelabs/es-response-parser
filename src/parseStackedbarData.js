@@ -39,7 +39,7 @@ export default function parseStackedbarData(response) {
 
 
             //sort it by sum value
-            stackedbarData.sort(function (a, b) { return a.sum - b.sum });
+            stackedbarData.sort(function (a, b) { return a.sum - b.sum; });
             stackedbarData.reverse();
         }
         return stackedbarData;

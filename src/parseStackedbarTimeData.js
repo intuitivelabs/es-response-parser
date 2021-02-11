@@ -17,7 +17,7 @@ export default function parseStackedbarTimeData(response) {
                 var value = stackedbarDataParse[i].agg.buckets[j].doc_count;
 
                 innerData[keyy] = value;
-                sum = sum + value
+                sum = sum + value;
 
             }
 

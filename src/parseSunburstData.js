@@ -4,7 +4,7 @@ special parse function for sunburst chart
 
 export default function parseSunburstData(response) {
     if (response && response.aggregations && response.aggregations.agg && response.aggregations.agg.buckets) {
-        var sunburstDataParse = response.aggregations.agg.buckets
+        var sunburstDataParse = response.aggregations.agg.buckets;
         var innerData = [];
         var sunburstData = [];
 
@@ -27,7 +27,7 @@ export default function parseSunburstData(response) {
         sunburstData = {
             key: "data",
             children: sunburstData
-        }
+        };
         //console.log( JSON.stringify(sunburstData));
         return sunburstData;
     }
