@@ -6,5 +6,9 @@ export default function parseListData(response){
 }
 
 function parseIp(response) {
-    return parseListData(reponse);
+    return parseListData(response);
 }
+
+export {
+    parseIp
+};
