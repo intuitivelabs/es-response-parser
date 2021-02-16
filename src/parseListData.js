@@ -1,4 +1,4 @@
-export default function parseListData(response){
+function parseListData(response){
     if (response.aggregations && response.aggregations.agg && response.aggregations.agg.buckets && response.aggregations.nested) {
         return [response.aggregations.agg.buckets, response.aggregations.nested.value];
     }
@@ -10,5 +10,6 @@ function parseIp(response) {
 }
 
 export {
+    parseListData,
     parseIp
 };
