@@ -42,5 +42,3 @@ export default function parseMultipleLineDataShareAxisWithoutAgg(responseName, r
         return "";
     }
 }
-
-

@@ -42,5 +42,3 @@ export default function parseDateAreachart(responseName, response, responseName2
     }
     return "";
 }
-
-

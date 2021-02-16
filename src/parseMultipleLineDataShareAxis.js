@@ -47,5 +47,3 @@ export default function parseMultipleLineDataShareAxis(responseName, response, r
         return "";
     }
 }
-
-
