@@ -26,7 +26,7 @@
     },
     "rules": {}
   },
-  "version": "1.0.0",
+  "version": "0.0.0",
   "devDependencies": {
     "eslint": "^7.19.0"
   }
