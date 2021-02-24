@@ -1,0 +1,33 @@
+{
+  "author": {
+    "name": "cristian.constantin@intuitivelabs.com"
+  },
+  "deprecated": false,
+  "description": "ElasticSearch reponse post processor",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "es-response-parser",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "jshintConfig": {
+    "esversion": 6
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2015
+    },
+    "rules": {}
+  },
+  "version": "0.0.0",
+  "devDependencies": {
+    "eslint": "^7.19.0"
+  }
+}
