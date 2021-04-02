@@ -30,7 +30,7 @@ export default function parseStackedbarData(response) {
 
             }
         }
-        if (stackedbarData.length > 0) {
+        if (stackedbarData.length > 0 && del+expired > 0) {
             innerData["reg-del"] = del;
             innerData["reg-expired"] = expired;
             innerData['name'] = "reg-del/reg-expired";
