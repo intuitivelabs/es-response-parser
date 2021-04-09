@@ -45,8 +45,8 @@ export default function parseTopologyData(response) {
             for (var i = 0; i < dataParse[j].agg.buckets.length; i++) {
                 //if source already in nodeList
                 if (nodesList.includes(dataParse[j].agg.buckets[i].key)) {
-                    nodeId = nodesList.indexOf(dataParse[j].agg.buckets[i].key);
-                    nodesList[nodeId].value = nodesList[nodeId].value + dataParse[j].agg.buckets[i].doc_count;
+                    var objIndex = nodes.findIndex((obj => obj.ip === dataParse[j].agg.buckets[i].key));
+                    nodes[objIndex].value = nodes[objIndex].value +  dataParse[j].agg.buckets[i].doc_count;
                 } else {
                     nodesList.push(dataParse[j].agg.buckets[i].key);
                     nodeId = id++;
