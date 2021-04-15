@@ -7,7 +7,7 @@ export default function parseSunburstData(response) {
         var sunburstDataParse = response.aggregations.agg.buckets;
         var innerData = [];
         var sunburstData = [];
-
+        console.log( JSON.stringify(sunburstDataParse));
         for (var i = 0; i < sunburstDataParse.length; i++) {
             for (var j = 0; j < sunburstDataParse[i].agg.buckets.length; j++) {
                 innerData.push({
@@ -28,7 +28,6 @@ export default function parseSunburstData(response) {
             key: "data",
             children: sunburstData
         };
-        //console.log( JSON.stringify(sunburstData));
         return sunburstData;
     }
     return "";
