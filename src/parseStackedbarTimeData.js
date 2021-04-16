@@ -14,15 +14,14 @@ export default function parseStackedbarTimeData(response) {
         var sum = 0;
 
         var types = getTypes();
-        types = types.map(a => a.id);
+        if(types.length > 0 && types !== "type:none") types = types.map(a => a.id);
         for (var i = 0; i < stackedbarDataParse.length; i++) {
             for (var j = 0; j < stackedbarDataParse[i].agg.buckets.length; j++) {
                 //special case:  exceeded data needs also type filter
-                if (window.location.pathname === "/exceeded" && types.length > 0) {
+                if (window.location.pathname === "/exceeded" && (types.length > 0 && types !== "type:none")) {
                     if (types.includes(stackedbarDataParse[i].agg.buckets[j].key)) {
                         var keyy = stackedbarDataParse[i].agg.buckets[j].key;
                         var value = stackedbarDataParse[i].agg.buckets[j].doc_count;
-
                         innerData[keyy] = value;
                         sum = sum + value;
                     }
