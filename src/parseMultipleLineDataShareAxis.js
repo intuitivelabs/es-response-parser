@@ -14,34 +14,41 @@ export default function parseMultipleLineDataShareAxis(responseName, response, r
 
         //old data in background
         for (var j = 0; j < areachartDataParse2.length; j++) {
-            if (areachartDataParse2[j].agg.value !== null) {
-                areachartDataValue.push({
-                    date: areachartDataParse2[j].key + 60 * 60 * 24 * 1000,
-                    value: areachartDataParse2[j].agg.value,
-                });
+            //create sum of all attrs max count
+            var max = 0;
+            for (var k = 0; k < areachartDataParse2[j].agg.buckets.length; k++) {
+                max = max + areachartDataParse2[j].agg.buckets[k].agg2.value;
             }
+            areachartDataValue.push({
+                date: areachartDataParse2[j].key + 60 * 60 * 24 * 1000,
+                value: max
+            });
         }
         areachartDataFinal.push({
             name: responseName2,
             values: areachartDataValue
 
         });
-
         areachartDataValue = [];
         for (j = 0; j < areachartDataParse.length; j++) {
-            if (areachartDataParse[j].agg.value !== null) {
-                areachartDataValue.push({
-                    date: areachartDataParse[j].key,
-                    value: areachartDataParse[j].agg.value,
-                });
+            //create sum of all attrs max count
+            var max = 0;
+            for (k = 0; k < areachartDataParse[j].agg.buckets.length; k++) {
+                if (areachartDataParse[j].agg.buckets[k]) {
+                    max = max + areachartDataParse[j].agg.buckets[k].agg2.value;
+                }
             }
+            areachartDataValue.push({
+                date: areachartDataParse[j].key,
+                value: max
+            });
+
         }
         areachartDataFinal.push({
             name: responseName,
             values: areachartDataValue
 
         });
-
         return areachartDataFinal;
     } else {
         return "";
