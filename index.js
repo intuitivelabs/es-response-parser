@@ -40,3 +40,5 @@ export {default as parseTopologyData} from './src/parseTopologyData.js';
 export {default as parseTwoAggAnimation} from './src/parseTwoAggAnimation.js';
 export {default as parseTls} from './src/parseTls.js';
 export {default as parseAggQuerySumValue} from './src/parseAggQuerySumValue.js';
+export {default as parseTableHits} from './src/parseTableHits.js';
+
