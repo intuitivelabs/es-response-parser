@@ -1,8 +1,7 @@
 /*
 special parse function for dateheatmap chart
 */
-export default function parseDateHeatmap(response) {
-
+function parseDateHeatmap(response) {
     if (response.aggregations && response.aggregations.agg && response.aggregations.agg.buckets) {
         var heatmapDataParse = response.aggregations.agg.buckets;
         var heatmapDataFinal = [];
@@ -21,4 +20,12 @@ export default function parseDateHeatmap(response) {
     return "";
 }
 
+function parseDateHeatmapDecrypt(response){
+    parseDateHeatmap(response);
+}
+
+export {
+    parseDateHeatmap,
+    parseDateHeatmapDecrypt
+};
 

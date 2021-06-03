@@ -16,7 +16,7 @@ links{
     }
 
 */
-export default function parseTopologyDataAnimation(response) {
+function parseTopologyDataAnimation(response) {
     if (response && response.aggregations && response.aggregations.agg && response.aggregations.agg.buckets) {
         var nodes = [];
         var nodesList = [];
@@ -81,3 +81,13 @@ export default function parseTopologyDataAnimation(response) {
     }
     return "";
 }
+
+function parseTopologyDataAnimationDecrypt(response){
+    parseTopologyDataAnimation(response);
+}
+
+export {
+    parseTopologyDataAnimation,
+    parseTopologyDataAnimationDecrypt
+};
+
