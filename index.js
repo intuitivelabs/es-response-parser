@@ -21,7 +21,7 @@ export {default as parseHistogramData} from './src/parseHistogramData.js';
 export {default as parseHits} from './src/parseHits.js';
 export {default as parseHitsTotal} from './src/parseHitsTotal.js';
 export {default as parseListDataAnimation} from './src/parseListDataAnimation.js';
-export {default as parseListDataCardinality} from './src/parseListDataCardinality.js';
+export {parseListDataCardinality, parseListDataCardinalityDecrypt} from './src/parseListDataCardinality.js';
 export {parseListData, parseIp} from './src/parseListData.js';
 export {default as parseListDataOrder} from './src/parseListDataOrder.js';
 export {default as parseListDataSort} from './src/parseListDataSort.js';
