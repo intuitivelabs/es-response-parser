@@ -1,4 +1,4 @@
-export default function parseListDataCardinality(response) {
+function parseListDataCardinality(response) {
     var sum = 0;
     if (response && response.aggregations && response.aggregations.agg && response.aggregations.agg.buckets) {
         var data = response.aggregations.agg.buckets;
@@ -15,5 +15,14 @@ export default function parseListDataCardinality(response) {
     }
     return "";
 }
+
+function parseListDataCardinalityDecrypt(response){
+    parseListDataCardinality(response);
+}
+
+export {
+    parseListDataCardinality,
+    parseListDataCardinalityDecrypt
+};
 
 
