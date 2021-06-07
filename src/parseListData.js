@@ -9,7 +9,12 @@ function parseIp(response) {
     return parseListData(response);
 }
 
+function parseUri(response) {
+    return parseListData(response);
+}
+
 export {
     parseListData,
-    parseIp
+    parseIp,
+    parseUri
 };
