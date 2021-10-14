@@ -13,8 +13,13 @@ function parseUri(response) {
     return parseListData(response);
 }
 
+function parseList(response) {
+    return parseList(response);
+}
+
 export {
     parseListData,
+    parseList,
     parseIp,
     parseUri
 };
