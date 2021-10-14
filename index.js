@@ -22,7 +22,7 @@ export {default as parseHits} from './src/parseHits.js';
 export {default as parseHitsTotal} from './src/parseHitsTotal.js';
 export {default as parseListDataAnimation} from './src/parseListDataAnimation.js';
 export {parseListDataCardinality, parseListDataCardinalityDecrypt} from './src/parseListDataCardinality.js';
-export {parseListData, parseIp, parseUri} from './src/parseListData.js';
+export {parseListData, parseIp, parseUri, parseList} from './src/parseListData.js';
 export {default as parseListDataOrder} from './src/parseListDataOrder.js';
 export {default as parseListDataSort} from './src/parseListDataSort.js';
 export {default as parseMultipleData} from './src/parseMultipleData.js';
