@@ -31,7 +31,7 @@ function parseTopologyDataAnimation(response) {
                 //if source already in nodeList
                 if (nodesList.includes(dataParse[j].key)) {
                     nodeId = nodesList.indexOf(dataParse[j].key);
-                    nodesList[nodeId].value = nodesList[nodeId].value + dataParse[j].doc_count;
+                    nodes[nodeId].value = nodes[nodeId].value + dataParse[j].doc_count;
                 } else {
                     nodesList.push(dataParse[j].key);
                     nodeId = id++;
