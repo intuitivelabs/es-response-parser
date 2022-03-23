@@ -40,5 +40,5 @@ export {parseTopologyData, parseTopologyDataDecrypt} from './src/parseTopologyDa
 export {default as parseTwoAggAnimation} from './src/parseTwoAggAnimation.js';
 export {default as parseTls} from './src/parseTls.js';
 export {default as parseAggQuerySumValue} from './src/parseAggQuerySumValue.js';
-export {parseTableHits, decryptTableHits} from './src/parseTableHits.js';
+export {parseTableHits, decryptTableHits, decryptAttr} from './src/parseTableHits.js';
 

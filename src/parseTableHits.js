@@ -6,8 +6,13 @@ async function decryptTableHits(data, profile, length, page) {
     return data;
 }
 
+async function decryptAttr(data, profile, attr) {
+    return data;
+}
+
 
 export {
     parseTableHits,
-    decryptTableHits
+    decryptTableHits,
+    decryptAttr
   };
