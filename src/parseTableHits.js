@@ -10,9 +10,14 @@ async function decryptAttr(data, profile, attr) {
     return data;
 }
 
+async function decrypt(profile, data, decryptAttrs, showProgress = false) {
+    return data;
+}
+
 
 export {
     parseTableHits,
     decryptTableHits,
-    decryptAttr
-  };
+    decryptAttr,
+    decrypt
+};
