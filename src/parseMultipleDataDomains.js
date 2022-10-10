@@ -3,7 +3,7 @@ response2 is events rate that is from collectd index and can't be in one query
 
 */
 export default function parseMultipleDataDomains(response, response2, countEvents, hours) {
-    if (response && response.aggregations && response.aggregations.agg && response.aggregations.agg.buckets) {
+    if (response && response.aggregations && response.aggregations.agg && response.aggregations.agg.buckets && response2 && response2.aggregations && response2.aggregations.agg && response2.aggregations.agg.buckets) {
         var dataParse = response.aggregations.agg.buckets;
         var dataParse2 = response2.aggregations.agg.buckets;
         var dataFinal = [];
