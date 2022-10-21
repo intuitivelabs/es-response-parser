@@ -28,7 +28,7 @@ export default function parseMultipleDataDomains(response, response2, countEvent
                 value1: dataParse[j].agg3.value,
                 value2: dataParse[j].agg4.value,
                 value3: dataParse[j].agg5.value,
-                value5: dataParse[j].agg6.value
+                value4: dataParse[j].agg6.value
             });
         }
         return dataFinal;
