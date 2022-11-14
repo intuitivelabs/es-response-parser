@@ -12,14 +12,27 @@ export default function parseMultipleData(response) {
         var dataFinal = [];
 
         for (var j = 0; j < dataParse.length; j++) {
+            let values = [];
+            if (dataParse[j].agg.value) {
+                values.push({ value0: dataParse[j].agg.value });
+            }
+            if (dataParse[j].agg2.value) {
+                values.push({ value1: dataParse[j].agg2.value })
+            }
+            if (dataParse[j].agg3.value) {
+                values.push({ value2: dataParse[j].agg3.value })
+            }
+            if (dataParse[j].agg4.value) {
+                values.push({ value3: dataParse[j].agg4.value })
+            }
+            if (dataParse[j].agg6.value) {
+                values.push({ value4: dataParse[j].agg6.value / 100 })
+            }
             dataFinal.push({
                 name: dataParse[j].key,
-                value0: dataParse[j].agg.value,
-                value1: dataParse[j].agg2.value,
-                value2: dataParse[j].agg3.value,
-                value3: dataParse[j].agg4.value,
-                value4: dataParse[j].agg6.value/100
+                values: values
             });
+            values = [];
         }
         return dataFinal;
     }

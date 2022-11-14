@@ -21,15 +21,27 @@ export default function parseMultipleDataDomains(response, response2, countEvent
                     }
                 }
             }
-
+            var values = [];
+            if (rate) {
+                values.push({ "value0": rate });
+            }
+            if (dataParse[j].agg3.value) {
+                values.push({ "value1": dataParse[j].agg3.value })
+            }
+            if (dataParse[j].agg4.value) {
+                values.push({ "value2": dataParse[j].agg4.value })
+            }
+            if (dataParse[j].agg5.value) {
+                values.push({  "value3": dataParse[j].agg5.value })
+            }
+            if (dataParse[j].agg6.value) {
+                values.push({ "value4": dataParse[j].agg6.value})
+            }
             dataFinal.push({
                 name: dataParse[j].key,
-                value0: rate,
-                value1: dataParse[j].agg3.value,
-                value2: dataParse[j].agg4.value,
-                value3: dataParse[j].agg5.value,
-                value4: dataParse[j].agg6.value
+                values: values
             });
+            values = [];
         }
         return dataFinal;
     }
