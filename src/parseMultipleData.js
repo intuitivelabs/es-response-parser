@@ -26,6 +26,7 @@ export default function parseMultipleData(response) {
                 values.push({ value3: dataParse[j].agg4.value })
             }
             if (dataParse[j].agg6.value) {
+
                 values.push({ value4: dataParse[j].agg6.value / 100 })
             }
             dataFinal.push({
