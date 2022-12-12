@@ -7,11 +7,11 @@ export default function parseMultipleDataDomains(response, response2, countEvent
         var dataParse = response.aggregations.agg.buckets;
         var dataParse2 = response2.aggregations.agg.buckets;
         var dataFinal = [];
+        var rate = 0;
 
         for (var j = 0; j < dataParse.length; j++) {
             for (var i = 0; i < dataParse2.length; i++) {
-                var rate = 0;
-                if(dataParse[j].key === dataParse2[i].key){
+                if (dataParse[j].key === dataParse2[i].key) {
                     if (countEvents.hits && countEvents.hits.total && countEvents.hits.total.value && dataParse2[i].agg && dataParse2[i].agg.value) {
 
                         let total = countEvents.hits.total.value;
@@ -21,21 +21,19 @@ export default function parseMultipleDataDomains(response, response2, countEvent
                     }
                 }
             }
-            var values = [];
-            if (rate) {
-                values.push({ "value0": rate });
-            }
+            var values = {};
+            values.value1 = rate;
             if (dataParse[j].agg3.value) {
-                values.push({ "value1": dataParse[j].agg3.value })
+                values.value2 = dataParse[j].agg3.value;
             }
             if (dataParse[j].agg4.value) {
-                values.push({ "value2": dataParse[j].agg4.value })
+                values.value3 = dataParse[j].agg4.value;
             }
             if (dataParse[j].agg5.value) {
-                values.push({  "value3": dataParse[j].agg5.value })
+                values.value4 = dataParse[j].agg5.value;
             }
             if (dataParse[j].agg6.value) {
-                values.push({ "value4": dataParse[j].agg6.value})
+                values.value5 = dataParse[j].agg6.value;
             }
             dataFinal.push({
                 name: dataParse[j].key,
