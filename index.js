@@ -15,6 +15,7 @@ export {default as parseGeoipAnimation} from './src/parseGeoipAnimation.js';
 export {default as parseHeatmapDataAgg1} from './src/parseHeatmapDataAgg1.js';
 export {default as parseHeatmapDataAgg3} from './src/parseHeatmapDataAgg3.js';
 export {default as parseHeatmapDataAgg} from './src/parseHeatmapDataAgg.js';
+export {default as parseStatesCA} from './src/parseStatesCA.js';
 export {parseHeatmapData, parseHeatmapDataDecrypt} from './src/parseHeatmapData.js';
 export {default as parseHistogramDataAnimation} from './src/parseHistogramDataAnimation.js';
 export {default as parseHistogramData} from './src/parseHistogramData.js';
